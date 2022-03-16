@@ -1,0 +1,49 @@
+h2{
+    margin: 0;
+}
+
+.servicios {
+    border: 2px solid black;
+    display: grid;
+    background-color: aquamarine;
+    grid-template-columns: 100px repeat(1fr ,1fr );
+    grid-template-rows: 233px 233px 233px;
+    grid-auto-flow: 200px 200px;
+    grid-gap: 25px;
+    height: 750px;
+}
+
+.servicio{
+    color: rgb(119, 7, 248);
+    text-align: center;
+}
+
+.servicio-1{
+    background-color: rgb(152, 152, 252);
+    
+}
+
+.servicio-2{
+    background-color: rgb(245, 109, 109);
+    
+}
+
+.servicio-3{
+    background-color: rgb(172, 243, 188);
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.servicio-4{
+    background-color: rgb(247, 147, 242);
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+.servicio-5{
+    background-color: rgb(230, 171, 171);
+}
+
+.servicio-6{
+    background-color: rgb(194, 230, 127);
+}
