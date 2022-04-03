@@ -10,41 +10,53 @@
                          "footer    footer  footer ";
 
 }
-p {
-    text-align: center;
-    margin-top: 1px solid #b2ffff;
-  }
+
+
+
+html {
+  background: linear-gradient(-12deg, #ff9966, #33cccc);
+
+}
+
+h1{
+  text-align: center;
+}
 
 .contenedor .header {
-    background-color: brown;
+    background-color: rgb(255 ,102 , 102);
     grid-column-start: header ;
     grid-column-end: header;
 }
 
 .contenedor .sidebar-1{
-    background: chartreuse;
+    background: rgb(255,153,102);
 
     grid-area: sidebar-1;
 }
 
 .contenedor .contenido {
-    background: cyan;
+    background: rgb(255,204,102);
     grid-area: contenido;
 }
 
 .contenedor  .widgets{
-    background: chocolate;
+    background: rgb(102,153,153);
     grid-area:  widgets;
 }
 
 .contenedor  .sidebar-2{
-    background: rgb(6, 146, 240);
+    background: rgb(255,204,102);
     grid-area:  sidebar-2;
 }
 
 .contenedor  .footer{
-    background: rgb(189, 30, 210);
+    background: rgb(51,204,204);
     grid-area:  footer;
 }
 
+@media(min-width: 800px) and (max-width: 900px){
+  html {
+    background: linear-gradient(-12deg, #4e6f04, #1282ad);
 
+  }  
+}
