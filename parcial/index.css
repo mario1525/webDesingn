@@ -1,25 +1,44 @@
+* {
+    color: #000;
+    
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .contenedor {
     display: grid;
-    height: 2000px;
+    height: 1000px;
     grid-template-columns: 40% 40% 20%;
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: 100px 1000px 60px 10px;
     gap: 10px;
 }
 
 .item {
-    grid-column: 1/4;
+    background-color: #a7e9a6;
+    border-radius: 20px;
+
+    grid-column: 1/3;
     grid-row: 1/2;
 }
 
 .form {
-    border: solid 2px;
-    grid-area: 1/3/4/4;
+    border-radius: 20px;
+
+    grid-area: 1/3/3/4;
+    background-color: #a7e9a6;
 
 }
 
 .footer {
-    grid-area: 4/1/5/4;
-    grid-column: 3/4;
+    background-color: #a7e9a6;
+    border-radius: 20px;
+
+    grid-area: 3/1/4/4;
+
+}
+
+body {
+    background: #7fdbae;
 }
 
 h1,
@@ -34,13 +53,12 @@ img {
 }
 
 .imagen {
-    border: solid 2px;
     border-radius: 20px;
-    background-color: rgb(252,	242,193);
+    background-color: #a7e9a6;
     display: grid;
     grid-area: 2/1/3/2;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: 90px 250px 200px 250px 260px;
     grid-template-areas:
         "text text text text"
         "i4 i4 i5 i6  "
@@ -53,14 +71,18 @@ img {
     grid-area: text;
 }
 
+.info {
+    grid-template-areas: 12px;
+}
+
 .cars {
-    border: solid 2px;
-    border-radius: 20px;
-    background-color: rgb(252,	242,193);
+
+    border-radius: 30px;
+    background-color: #a7e9a6;
     display: grid;
     grid-area: 2/2/3/3;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: 90px 260px 230px 260px 260px;
     grid-template-areas:
         "text text text text"
         "i4 i4 i5 i6  "
@@ -68,3 +90,7 @@ img {
         "i9 i9 i11 i12  "
         "i9 i9 i10 i13 ";
 }
+
+@media (min-width: 300px) and (max-width: 420px) {}
+
+@media (min-width: 421px) and (max-width: 1030px) {}
