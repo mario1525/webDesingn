@@ -1,0 +1,14 @@
+body {
+
+    background-color: rgb(255,153,102);
+  }
+  
+  code {
+    color: black;
+  }
+  @media (min-width: 800px) and (max-width: 900px) {
+    body {
+      background-color: rgb(255 ,102 , 102);
+      color:#ffff;
+    }
+  }
