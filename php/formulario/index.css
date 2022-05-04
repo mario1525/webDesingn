@@ -1,0 +1,41 @@
+.formu {
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 2px solid rgb(8, 8, 8);
+    border-radius: 1em;    
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-top: 10px;
+}
+input,
+label {
+    width: 90px;
+    text-align: right;
+}
+
+input,
+textarea {
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+    vertical-align: top;
+    height: 26px;
+}
+.btn{
+    margin-left: 160px;
+}
+
+.msg{
+    height: 50px;  
+}
+
+
+
