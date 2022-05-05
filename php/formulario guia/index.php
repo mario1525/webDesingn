@@ -9,9 +9,6 @@ $enlace = mySqli_connect($servidor, $usuario, $clave, $baseDeDatos);
 if (!$enlace) {
 	echo "error en BD";
 }
-
-
-
 ?>
 
 <!DOCTYPE html>
