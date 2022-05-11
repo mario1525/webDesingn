@@ -1,3 +1,16 @@
+<?php
+$servidor = "localhost";
+$usuario = "root";
+$clave = "12345678";
+$baseDeDatos = "mensajes";
+
+$enlace = mySqli_connect( $servidor, $usuario, $clave, $baseDeDatos);
+
+if (! $enlace){
+	echo "error en la conexion";
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -156,19 +169,19 @@
           <ul>
             <li>
               <label for="name">Nombre:</label>
-              <input type="text" id="name" name="user_name" />
+              <input type="text" id="name" name="nombre" placeholder="Nombre" />
             </li>
             <li>
               <label for="mail">Correo electrónico:</label>
-              <input type="email" id="mail" name="user_mail" />
+              <input type="email" id="mail"  name="correo" placeholder="Correo" />
             </li>
             <li>
               <label for="msg">Mensaje:</label>
-              <textarea id="msg" name="user_message"></textarea>
+              <textarea id="msg" name="message"  placeholder="mensaje"></textarea>
             </li>
-            <div class="buttom">
+            <li>
               <button type="submit">Envíe su mensaje</button>
-            </div>
+            </li>          
           </ul>
         </form>
         <div class="info">
@@ -182,3 +195,23 @@
     </section>
   </body>
 </html>
+
+<?php
+if (isset ( $_POST  ['registrarse'])){
+  $nombre= $_POST ["nombre"];
+  $correo = $_POST ["correo"];
+  $mensaje = $_POST ["mensaje"];
+  $Id = rand (1,99);
+}
+
+$InsertarDatos = "INSERT INTO datos VALUES ('$nombre', 
+                                             '$correo', 
+											 '$mensaje', 
+											 '$Id')";
+
+$EjecutarInsertar = mysqli_query($enlace, $InsertarDatos);
+
+if  (!$EjecutarInsertar){
+	echo  "Error en SQL";
+}
+?>
