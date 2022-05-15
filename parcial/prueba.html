@@ -1,16 +1,3 @@
-<?php
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$baseDeDatos = "mensajes";
-
-$enlace = mySqli_connect( $servidor, $usuario, $clave, $baseDeDatos);
-
-if (! $enlace){
-	echo "error en la conexion";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="es">
   <head>
@@ -195,23 +182,3 @@ if (! $enlace){
     </section>
   </body>
 </html>
-
-<?php
-
-
-$nombre = $_POST["nombre"];
-$email = $_POST["correo"];
-$mensaje = $_POST["message"];
-  $Id = rand (1,99);
-
-$InsertarDatos = "INSERT INTO datos VALUES ('$Id',
-                                            '$nombre', 
-                                            '$email', 
-											                      '$mensaje')";
-
-$EjecutarInsertar = mysqli_query($enlace, $InsertarDatos);
-
-if  (!$EjecutarInsertar){
-	echo  "Error en SQL";
-}
-?>

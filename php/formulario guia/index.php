@@ -86,7 +86,7 @@ if (! $enlace){
 </html>
 
 <?php
-if (isset ( $_POST  ['registrarse'])){
+if (isset ( $_POST  ['formulario'])){
   $nombre= $_POST ["nombre"];
   $correo = $_POST ["correo"];
   $sexo = $_POST ["sexo"];
